@@ -1,6 +1,7 @@
 # Sales Funnel Dashboard
 <img width="1544" height="938" alt="preview" src="https://github.com/user-attachments/assets/2fe2e631-5937-4f6d-9c7b-e02578d9b744" />
 
+# [Dashboard Link](https://moiddar.github.io/sales-funnel-dashboard/)   
 
 Analyses `raw_data.xlsx` (opportunity changelog) to compare beginning-of-quarter pipeline value vs closed-won value, displayed in an interactive dashboard.
 
