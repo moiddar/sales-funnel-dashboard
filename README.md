@@ -1,4 +1,6 @@
 # Sales Funnel Dashboard
+<img width="1544" height="938" alt="preview" src="https://github.com/user-attachments/assets/2fe2e631-5937-4f6d-9c7b-e02578d9b744" />
+
 
 Analyses `raw_data.xlsx` (opportunity changelog) to compare beginning-of-quarter pipeline value vs closed-won value, displayed in an interactive dashboard.
 
@@ -118,18 +120,3 @@ All metrics include nested breakdowns by `by_vertical`, `by_product`, and `by_ve
 The comparison data uses the same dual-mode logic: `first_entry_value` for "All" quarters, `funnel_value` for a specific quarter. When vertical/product filters are active, it uses the `by_vertical_product` cross-tab to compute filtered totals.
 
 `InsightsSection` receives the full `FilteredData` and `FilterState`. It contains a client-side insight engine (`generateInsights`) that derives up to 6 prioritised insights: stage bottleneck, best/worst vertical, best/worst product, pipeline concentration risk, and conversion trend (All mode only). Insights adapt to filters — comparisons are suppressed when fewer than 2 items are visible. Each insight has a sentiment (positive/negative/warning/neutral) that drives its icon and border color.
-
-## Commands
-
-```bash
-# Data pipeline
-source venv/bin/activate
-pip install -r requirements.txt
-python scripts/build_data.py
-
-# Dashboard
-cd dashboard
-npm install
-npm run dev          # Dev server at localhost:5173
-npm run build        # Production build to dist/
-```
